@@ -59,7 +59,7 @@ int main()
          DrawStrekoza    (    1000 - t,       300,             0.25,             0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTBLUE, t%2*2 + 0.5, t%2*5 - 3);
          DrawCust        (         600,       600, (t/10)%2*0.5 - 1, (t/10)%2*0.5 - 1);
          DrawMalchikIVAN (    1100 - t,       350,              1.5,              1.5, 2.5 , t%2*2 , t%2 + 2, t%2*5 - 3);
-         DrawStrekoza    (      t - 20,      t-30,             0.75,             0.75, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2*2 + 0.5, t%2*5 - 3);
+         DrawStrekoza    (      t - 20,      t-30,             0.55,             0.55, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2*2 + 0.5, t%2*5 - 3);
          DrawMalchikIVAN (t%2*2 + 1000, t%5 + 450,              2.5,              2.5, 5 , t%2*5 , 2, t%2*5 + 3);
          DrawDevohkaLIZA ( t%2*2 + 850, t%5 + 450,                3,                3);
          DrawMachina     (     t + 200,       680,                3,                2);
@@ -93,10 +93,10 @@ int main()
          DrawMalchikIVAN (  650 + t1, t1%5 + 450,       2.5,  2.5, 5, 5, 2, 3);
          DrawDevohkaLIZA (  550 + t1, t1%5 + 450,         3,    3);
          DrawRaketa      (       600,        300,         2,    2);
-         DrawStrekoza    (       500,   t1 + 100,  t1%2*0.5,  0.5, TX_CYAN, TX_GRAY, TX_LIGHTBLUE, -2, 3);
-         DrawStrekoza    (       350,   t1 - 100, t1%2*0.25, 0.25, TX_YELLOW, TX_GREEN, TX_LIGHTBLUE, t1%2 + 0.5, t1%2*2 - 3);
-         DrawStrekoza    (  t1 + 150,   t1 - 100,      0.75, 0.75, TX_LIGHTMAGENTA, TX_DARKGRAY, TX_YELLOW, t1%2 - 0.25, t1%2*2 - 0.5);
-         DrawStrekoza    (  t1 + 250,   t1 + 100,         1,    1, TX_LIGHTBLUE, TX_GRAY, TX_YELLOW, (t1%2)*3, (t1%2)*3 - 2);
+         DrawStrekoza    (       500,   t1 + 100,  t1%2*0.6,  0.6, TX_CYAN, TX_GRAY, TX_LIGHTBLUE, -2, 3);
+         DrawStrekoza    (       250,   t1 - 100, t1%2*0.25, 0.25, TX_YELLOW, TX_GREEN, TX_LIGHTBLUE, t1%2 + 0.5, t1%2*2 - 3);
+         DrawStrekoza    (  t1 + 150,   t1 - 100,      0.65, 0.65, TX_LIGHTMAGENTA, TX_DARKGRAY, TX_YELLOW, t1%2 - 0.25, t1%2*2 - 0.5);
+         DrawStrekoza    (  t1 + 250,   t1 + 100,      0.75, 0.75, TX_LIGHTBLUE, TX_GRAY, TX_YELLOW, (t1%2)*3, (t1%2)*3 - 2);
          DrawMachina     (  t1 + 700,        370,         1,    1);
          DrawMalchikIVAN (  t1 + 400,        330,       0.5,  0.5, 2.5, t1%2*2, t1%2 + 2, t1%2*5 - 3);
          DrawMalchikIVAN (  t1 + 380,        350,       0.5,  0.5, 2.5, t1%2*2, t1%2 + 2, t1%2*5 - 3);
