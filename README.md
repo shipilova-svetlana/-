@@ -38,7 +38,7 @@
  ![image](https://user-images.githubusercontent.com/82114365/114375869-ca338480-9b8d-11eb-8ceb-a7d9836bfdad.png)
 
 •	куст;
- ![image](https://user-images.githubusercontent.com/82114365/114375892-cf90cf00-9b8d-11eb-964f-eb768abfe20e.png)
+ ![image](https://user-images.githubusercontent.com/82114365/114377579-7b86ea00-9b8f-11eb-804d-f0148f1fe475.png)
 
 •	ракета;
  ![image](https://user-images.githubusercontent.com/82114365/114375906-d4ee1980-9b8d-11eb-960d-0e66894f74d4.png)
