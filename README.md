@@ -47,16 +47,4 @@
  ![image](https://user-images.githubusercontent.com/82114365/114375940-dc152780-9b8d-11eb-83af-2d38bb3d2149.png)
 
 Начальная сцена, жаркий летний день:
-![image](https://user-images.githubusercontent.com/82114365/114375977-e46d6280-9b8d-11eb-93f1-207163951098.png)
- 
-Следующая сцена, дождь:
- ![image](https://user-images.githubusercontent.com/82114365/114376049-f5b66f00-9b8d-11eb-9788-a4886191e19e.png)
-
-После дождя:
-![image](https://user-images.githubusercontent.com/82114365/114376110-00710400-9b8e-11eb-9625-95245f4956e8.png)
- 
-Опоздание на ракету:
-![image](https://user-images.githubusercontent.com/82114365/114376177-0e268980-9b8e-11eb-82b7-5903bc2ea602.png)
-
-![image](https://user-images.githubusercontent.com/82114365/114376198-1383d400-9b8e-11eb-8024-5de671685c11.png)
  
