@@ -66,4 +66,10 @@ txEllipse (x0, y0, x, y) - рисует эллипс
  
  ![изображение](https://user-images.githubusercontent.com/82114365/114375687-99ebe600-9b8d-11eb-92df-e3bead3beaf3.png)
 
+Для повторения одинаковых  действий используются  циклы for и while. 
+ 
+  ![изображение](https://user-images.githubusercontent.com/82114365/114375776-b2f49700-9b8d-11eb-8037-3da06c5e183d.png)
+
+
+ ![изображение](https://user-images.githubusercontent.com/82114365/114375804-ba1ba500-9b8d-11eb-85e5-449374fad45c.png)
 
