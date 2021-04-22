@@ -27,7 +27,9 @@ txPolygon (const POINT points[], intnumPoints) – рисует ломанную
 txEllipse (x0, y0, x, y) - рисует эллипс
 
 Например можно создать такие объекты как:
+
 •	мальчик;
+
 
 
 
