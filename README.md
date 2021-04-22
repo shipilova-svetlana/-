@@ -44,7 +44,9 @@ txEllipse (x0, y0, x, y) - рисует эллипс
 
  ![изображение](https://user-images.githubusercontent.com/82114365/114375666-92c4d800-9b8d-11eb-90f8-15b741f1b3a3.png)
 
+• тучки;
 
+ ![изображение](https://user-images.githubusercontent.com/82114365/114375804-ba1ba500-9b8d-11eb-85e5-449374fad45c.png)
 
 
 
