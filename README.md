@@ -32,7 +32,18 @@ txEllipse (x0, y0, x, y) - рисует эллипс
 
  ![изображение](https://user-images.githubusercontent.com/82114365/114375537-6d37ce80-9b8d-11eb-9795-8bbb8bc9d196.png)
 
+•	девочка;
+ 
+![изображение](https://user-images.githubusercontent.com/82114365/114375583-7c1e8100-9b8d-11eb-9d4b-e4aaabce30d1.png)
+
 •	кот;
+
+![изображение](https://user-images.githubusercontent.com/82114365/114375609-850f5280-9b8d-11eb-8685-ee899fb1fa62.png)
+
+• стрекоза;
+
+ ![изображение](https://user-images.githubusercontent.com/82114365/114375666-92c4d800-9b8d-11eb-90f8-15b741f1b3a3.png)
+
 
 
 
