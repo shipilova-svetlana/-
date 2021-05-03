@@ -1,15 +1,15 @@
-//{===========================================================================
+//{====================================================================================================
 //
-//***
+//***@file       SvetlanaLib.h
 //
-//***
+//***@date           2021
 //
-//***Выполнила Шипилова СЛ
-//}===========================================================================
+//***@author Выполнила Шипилова СЛ
+//}====================================================================================================
 
 #include "TXLib.h"
 
-//---------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
 void DrawSun         (int x, int y, double sizex, double sizey);
 void DrawDevohkaLIZA (int x, int y, double sizex, double sizey, double rukaL, double rukaR,
                       double nogaL, double nogaR, double rot, double glazL, double glazR);
@@ -33,7 +33,7 @@ void DrawElka        (int x, int y, double sizex, double sizey);
 void DrawRaketa      (int x, int y, double sizex, double sizey);
 void DrawOblokoDoyd  (int x, int y, double sizex, double sizey,
                      COLORREF hbColor);
-void drawRain        (int x0, int y0, int sizeY);
+void DrawRain        (int x0, int y0, int sizeY);
 void DrawSzenaDojd();
 void DrawSzenaLiven();
 void DrawBackground();
@@ -41,110 +41,25 @@ void DrawBackgroundPezaj();
 void DrawOblokaPlivut();
 void DrawStrekoziMalenkie();
 void DrawPoletStrekoz();
-//----------------------------------------------------------------------------
-
-void DrawStrekoziMalenkie()
-    {
-    int  t = 300;
-    while (t <= 600)
-         {
-         txSetFillColor (RGB (175, 238, 238));
-         txClear();
-
-         DrawStrekoza (t + 500,     300, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 550,     250, 0.075, 0.075, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
-         DrawStrekoza (t + 500,     250, 0.075, 0.075, TX_LIGHTRED ,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 600,     300, 0.075, 0.075, TX_LIGHTBLUE,    TX_LIGHTRED, TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 510,     310, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 560,     265, 0.075, 0.075, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
-         DrawStrekoza (t + 530,     265, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 620,     315, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 300, t + 200,  0.25,  0.25, TX_LIGHTMAGENTA, TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (t + 350, t + 150,  0.25,  0.25, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
-         DrawStrekoza (t + 300, t + 150,  0.25,  0.25, TX_LIGHTMAGENTA, TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (    500, t + 100,  0.25,  0.25, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (    550,  t + 50,  0.25,  0.25, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
-         DrawStrekoza (    500,  t + 50,  0.25,  0.25, TX_LIGHTMAGENTA, TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza (    600, t + 100,  0.25,  0.25, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTMAGENTA, t%2 * 2 + 0.5, t%2 * 5 - 3);
-
-         t ++;
-         txSleep (50);
-         }
-
-    }
-//----------------------------------------------------------------------------
-
-void DrawOblokaPlivut()
-    {
-    int t = 500;
-    while (t <= 1200)
-         {
-         txSetFillColor (RGB (175, 238, 238));
-         txClear();
-
-         DrawSun    (600,      50, (t%2) * 3, (t/10)%2 * 2 - 1);
-         DrawObloko (t,        70,      0.25, 0.25, TX_BLUE);
-         DrawObloko (t,       100,         1,    1, TX_CYAN);
-         DrawObloko (t + 500, 100,         2,    2, TX_BLUE);
-         DrawObloko (t + 200, 120,       0.5,  0.5, TX_LIGHTBLUE);
-         DrawObloko (t + 300,  10,         2,    2, TX_BLUE);
-         DrawObloko (t + 100, 120,       0.5,  0.5, TX_LIGHTBLUE);
-         DrawObloko (t - 300,  10,         2,    2, TX_BLUE);
-         DrawObloko (t - 100, 120,        0.5, 0.5, TX_LIGHTBLUE);
-         t ++;
-         txSleep (50);
-         }
-    }
-//----------------------------------------------------------------------------
-
-void DrawPoletStrekoz()
-    {
-    int t = 500;
-    while (t <= 1200)
-         {
-         txSetFillColor (RGB (175, 238, 238));
-         txClear();
-
-
-         DrawStrekoza    (- t + 1000,     300, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (  t - 10,   t - 30,  0.55, 0.55, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (  t + 100,  t + 200, 0.25, 0.25, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (  t + 150,  t + 150, 0.25, 0.25, TX_GRAY, TX_YELLOW, TX_DARKGRAY, t%2 * 2 + 0.5, t%2 * 5 + 3);
-         DrawStrekoza    (  t + 100,  t + 150, 0.25, 0.25, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (  t + 200,  t + 200, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTMAGENTA, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (      300,  t + 100, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (      350,  t + 50,  0.25, 0.25, TX_GRAY, TX_YELLOW, TX_DARKGRAY, t%2 * 2 + 0.5, t%2 * 5 + 3);
-         DrawStrekoza    (      300,  t + 50,  0.25, 0.25, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
-         DrawStrekoza    (      400,  t + 100, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTMAGENTA, t%2 * 2 + 0.5, t%2 * 5 - 3);
-
-         t ++;
-         txSleep (50);
-         }
-    }
-//----------------------------------------------------------------------------
-
-void DrawSzenaLiven()
-    {
-    drawRain(10, 10, 10);
-
-    drawRain(20, 20, 30);
-
-    drawRain(20, 30, 20);
-
-    drawRain(30, 40, 50);
-    }
-//----------------------------------------------------------------------------
-
-void DrawSzenaDojd()
-    {
-    int t = 500;
-    for (int x = 150; x <= 1500; x += 50)
-         {
-         DrawOblokoDoyd ( x, 100, 1, 1, TX_CYAN);
-         txSleep (500);
-         }
-    }
-//----------------------------------------------------------------------------
+//{--------------------------------------------------------------------------------------------------------
+//! Рисует облако!
+//!
+//! @param x                       x-координата центра облака!
+//! @param y                       y-координата центра облака!
+//! @param sizex                   Размер облака!
+//! @param sizey                   Размер облака!
+//! @param COLORREF hbColor        Цвет облака!
+//!
+//! @note                          Функция хорошая, но всегда её можно улучшить!
+//!
+//! @see                           DrawOblokaPlivut()
+//!
+//! @par                           Пример использования:
+//! @code
+//!                                DrawObloko      (1000, 100, 2.00, 2.00, TX_BLUE);
+//!                                DrawObloko      ( 700, 120, 0.50, 0.50, TX_LIGHTBLUE);
+//! @endcode
+//}--------------------------------------------------------------------------------------------------------
 
 void DrawObloko (int x, int y, double sizex, double sizey,
                 COLORREF hbColor)
@@ -156,7 +71,24 @@ void DrawObloko (int x, int y, double sizex, double sizey,
     txCircle (x - 100 * sizex, y - 50 * sizey, 60 * sizex);
     txCircle (x + sizex,       y + sizey,      70 * sizex);
     }
-//----------------------------------------------------------------------------
+//{--------------------------------------------------------------------------------------------------------
+//! Рисует облако с дождем!
+//!
+//! @param x                       x-координата центра облака!
+//! @param y                       y-координата центра облака!
+//! @param sizex                   Размер облака!
+//! @param sizey                   Размер облака!
+//! @param COLORREF hbColor        Цвет облака!
+//!
+//! @note                          Функция не плохая, но всегда её можно улучшить!
+//!
+//! @see                           DrawSzenaDojd()
+//!
+//! @par                           Пример использования:
+//! @code
+//!                                DrawOblokoDoyd ( x, 100, 1, 1, TX_CYAN);
+//! @endcode
+//}--------------------------------------------------------------------------------------------------------
 
 void DrawOblokoDoyd (int x, int y, double sizex, double sizey,
                 COLORREF hbColor)
@@ -174,8 +106,88 @@ void DrawOblokoDoyd (int x, int y, double sizex, double sizey,
     txLine   (x + 20 * sizex,  y + 20 * sizey, x + 70 * sizex, y + 615 * sizey);
     txLine   (x + 25 * sizex,  y + 25 * sizey, x + 75 * sizex, y + 620 * sizey);
     }
+//{--------------------------------------------------------------------------------------------------------
+//! Рисует капли дождя!
+//!
+//! @param x0                      x0- начальные координаты капель дождя!
+//! @param y0                      y0- начальные координаты капель дождя!
+//!
+//! @param sizeY                   Размер капель!
+//!
+//!
+//! @note                          Функция хорошая, но всегда её можно улучшить!
+//!
+//! @see                           DrawSzenaLiven()
+//!
+//! @par                           Пример использования:
+//! @code
+//!                                DrawRain(10, 10, 10);
+//!                                DrawRain(20, 20, 30);
+//! @endcode
+//}--------------------------------------------------------------------------------------------------------
 
-//----------------------------------------------------------------------------
+void DrawRain     (int x0, int y0, int sizeY)
+    {
+    int t = -20;
+
+    while (t < 20)
+        {
+        for (int x = x0; x <= 1300; x += 15)
+            {
+            txSetColor (TX_BLUE);
+
+            DrawObloko (t * 70 + 300,  50,   2,   2, TX_BLUE);
+
+            DrawObloko (t * 60 - 300,  50,   2,   2, TX_BLUE);
+
+
+            txLine (x, t * 50 + x%2 * 20 + y0, x, t * 50 + x%2 * 20 + y0 + sizeY);
+
+            }
+
+        txSleep (5 * t);
+        t++;
+        }
+    }
+//-------------------------------------------------------------------------------------------------------
+
+void DrawSzenaLiven()
+    {
+    DrawRain(10, 10, 10);
+
+    DrawRain(20, 20, 30);
+
+    DrawRain(20, 30, 20);
+
+    DrawRain(30, 40, 50);
+    }
+//--------------------------------------------------------------------------------------------------------
+
+void DrawSzenaDojd()
+    {
+    int t = 500;
+    for (int x = 150; x <= 1500; x += 50)
+         {
+         DrawOblokoDoyd ( x, 100, 1, 1, TX_CYAN);
+         txSleep (500);
+         }
+    }
+
+//{---------------------------------------------------------------------------------------------------------
+//! Рисует солнце!
+//!
+//! @param x                      x-координата центра солнца!
+//! @param y                      y-координата центра солнца!
+//! @param sizeX                  Размер лучей солнца по x!
+//! @param sizeY                  Размер лучей солнца по y!
+//!
+//! @note                         Функция работает, но есть что исправить!
+//!
+//! @par                          Пример использования:
+//! @code
+//!                               DrawSun    (600, 50, (t%2) * 3, (t/10)%2 * 2 - 1);
+//! @endcode
+//}----------------------------------------------------------------------------------------------------------
 
 void DrawSun (int x, int y, double sizex, double sizey)
     {
@@ -191,7 +203,7 @@ void DrawSun (int x, int y, double sizex, double sizey)
     txLine   (x + sizex, y + sizey, x + 190 * sizex, y + 125 * sizey);
     txCircle (x + sizex, y + sizey, 50);
     }
-//----------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------
 
 void DrawFir (int x, int y, double sizex, double sizey,
              COLORREF hadColor)
@@ -209,7 +221,7 @@ void DrawFir (int x, int y, double sizex, double sizey,
     txLine   (x + 30 * sizex, y +  40 * sizey, x + 110 * sizex, y + 150 * sizey);
     }
 
-//----------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------
 
 void DrawCust(int x, int y, double sizex, double sizey)
     {
@@ -238,7 +250,7 @@ void DrawCust(int x, int y, double sizex, double sizey)
     txCircle (x + sizex,      y + sizey,      50 * sizex);
     }
 
-//----------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------------
 
 void DrawCot(int x, int y, double sizex, double sizey,
             COLORREF hdColor, double hvostx, double hvosty, double us,
@@ -286,7 +298,7 @@ void DrawCot(int x, int y, double sizex, double sizey,
     txLine (x + sizex, y + sizey, x + 80 * sizex + us, y - 15 * sizey + us);
     }
 
-//----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 void DrawDevohkaLIZA(int x, int y, double sizex, double sizey, double rukaL,
      double rukaR, double nogaL, double nogaR, double rot, double glazL, double glazR)
@@ -339,7 +351,7 @@ void DrawDevohkaLIZA(int x, int y, double sizex, double sizey, double rukaL,
     txSetFillColor (TX_LIGHTRED);
     txCircle (x + sizex, y - 5 * sizey, 2 * sizex + rot);
     }
-//----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 void DrawMachina(int x, int y, double sizex, double sizey)
     {
@@ -360,7 +372,7 @@ void DrawMachina(int x, int y, double sizex, double sizey)
     txCircle (x - 20 * sizex, y + sizey, 10 * sizex);
     txCircle (x + 20 * sizex, y + sizey, 10 * sizex);
     }
-//----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 void DrawMalchikIVAN(int x, int y, double sizex, double sizey, double twist,
      double crazy, double handUp, double smile)
@@ -400,7 +412,7 @@ void DrawMalchikIVAN(int x, int y, double sizex, double sizey, double twist,
     txLine (x - 5 * sizex, y - 5 * sizey,       x ,            y - 5 * sizey + smile);
     txLine (x ,            y - 5 * sizey+smile, x + 5 * sizex, y - 5 * sizey);
     }
-//----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 void DrawDerevo (int x, int y, double sizex, double sizey,
              COLORREF bbColor)
@@ -417,7 +429,7 @@ void DrawDerevo (int x, int y, double sizex, double sizey,
     txSetFillColor (TX_GREEN );
     txLine (x + sizex, y + sizey, x + sizex,  y + 500 * sizey);
     }
-//----------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 void DrawStrekoza (int x, int y, double sizex, double sizey,
                   COLORREF heabColor, COLORREF eyeColor, COLORREF esColor,
@@ -441,7 +453,7 @@ void DrawStrekoza (int x, int y, double sizex, double sizey,
     txSetColor (TX_DARKGRAY, 5 * sizex);
     txLine (x + sizex, y + sizey, x + sizex, y - 80 * sizey);
     }
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 
 void DrawElka(int x, int y, double sizex, double sizey)
     {
@@ -460,7 +472,7 @@ void DrawElka(int x, int y, double sizex, double sizey)
     txLine (x - 5 * sizex, y + 40 * sizey, x + 5 * sizex, y + 40 * sizey);
     txLine (x + 5 * sizex, y + 40 * sizey, x + 5 * sizex, y + 35 * sizey);
     }
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 
 void DrawRaketa(int x, int y, double sizex, double sizey)
     {
@@ -478,7 +490,7 @@ void DrawRaketa(int x, int y, double sizex, double sizey)
     txSetFillColor (TX_YELLOW);
     txCircle (x + sizex, y + sizey, 10 * sizex);
     }
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 
 void DrawBackground()
     {
@@ -504,7 +516,7 @@ void DrawBackground()
     DrawDerevo      ( 800, 150, 0.25, 0.12, TX_LIGHTGREEN);
     DrawElka        (1000, 270, 1.00, 1.00);
     }
-//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 
 void DrawBackgroundPezaj()
     {
@@ -552,7 +564,7 @@ void DrawBackgroundPezaj()
     DrawElka        ( 150, 150, 1.50, 5);
 
     }
-//----------------------------------------------------------------------------//----------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------
 
 void drawRain     (int x0, int y0, int sizeY)
     {
@@ -577,3 +589,84 @@ void drawRain     (int x0, int y0, int sizeY)
         t++;
         }
     }
+//---------------------------------------------------------------------------------------------------------------
+
+void DrawStrekoziMalenkie()
+    {
+    int  t = 300;
+    while (t <= 600)
+         {
+         txSetFillColor (RGB (175, 238, 238));
+         txClear();
+
+         DrawStrekoza (t + 500,     300, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 550,     250, 0.075, 0.075, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
+         DrawStrekoza (t + 500,     250, 0.075, 0.075, TX_LIGHTRED ,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 600,     300, 0.075, 0.075, TX_LIGHTBLUE,    TX_LIGHTRED, TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 510,     310, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 560,     265, 0.075, 0.075, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
+         DrawStrekoza (t + 530,     265, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 620,     315, 0.075, 0.075, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 300, t + 200,  0.25,  0.25, TX_LIGHTMAGENTA, TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (t + 350, t + 150,  0.25,  0.25, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
+         DrawStrekoza (t + 300, t + 150,  0.25,  0.25, TX_LIGHTMAGENTA, TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (    500, t + 100,  0.25,  0.25, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (    550,  t + 50,  0.25,  0.25, TX_GRAY,         TX_YELLOW,   TX_DARKGRAY,     t%2 * 2 + 0.5, t%2 * 5 + 3);
+         DrawStrekoza (    500,  t + 50,  0.25,  0.25, TX_LIGHTMAGENTA, TX_GREEN,    TX_LIGHTBLUE,    t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza (    600, t + 100,  0.25,  0.25, TX_LIGHTBLUE,    TX_GREEN,    TX_LIGHTMAGENTA, t%2 * 2 + 0.5, t%2 * 5 - 3);
+
+         t ++;
+         txSleep (50);
+         }
+
+    }
+//-----------------------------------------------------------------------------------------------------------------------
+
+void DrawOblokaPlivut()
+    {
+    int t = 500;
+    while (t <= 1200)
+         {
+         txSetFillColor (RGB (175, 238, 238));
+         txClear();
+
+         DrawSun    (600,      50, (t%2) * 3, (t/10)%2 * 2 - 1);
+         DrawObloko (t,        70,      0.25, 0.25, TX_BLUE);
+         DrawObloko (t,       100,         1,    1, TX_CYAN);
+         DrawObloko (t + 500, 100,         2,    2, TX_BLUE);
+         DrawObloko (t + 200, 120,       0.5,  0.5, TX_LIGHTBLUE);
+         DrawObloko (t + 300,  10,         2,    2, TX_BLUE);
+         DrawObloko (t + 100, 120,       0.5,  0.5, TX_LIGHTBLUE);
+         DrawObloko (t - 300,  10,         2,    2, TX_BLUE);
+         DrawObloko (t - 100, 120,        0.5, 0.5, TX_LIGHTBLUE);
+         t ++;
+         txSleep (50);
+         }
+    }
+//---------------------------------------------------------------------------------------------------------------------
+
+void DrawPoletStrekoz()
+    {
+    int t = 500;
+    while (t <= 1200)
+         {
+         txSetFillColor (RGB (175, 238, 238));
+         txClear();
+
+
+         DrawStrekoza    (- t + 1000,     300, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (  t - 10,   t - 30,  0.55, 0.55, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (  t + 100,  t + 200, 0.25, 0.25, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (  t + 150,  t + 150, 0.25, 0.25, TX_GRAY, TX_YELLOW, TX_DARKGRAY, t%2 * 2 + 0.5, t%2 * 5 + 3);
+         DrawStrekoza    (  t + 100,  t + 150, 0.25, 0.25, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (  t + 200,  t + 200, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTMAGENTA, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (      300,  t + 100, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (      350,  t + 50,  0.25, 0.25, TX_GRAY, TX_YELLOW, TX_DARKGRAY, t%2 * 2 + 0.5, t%2 * 5 + 3);
+         DrawStrekoza    (      300,  t + 50,  0.25, 0.25, TX_LIGHTMAGENTA, TX_GREEN, TX_LIGHTBLUE, t%2 * 2 + 0.5, t%2 * 5 - 3);
+         DrawStrekoza    (      400,  t + 100, 0.25, 0.25, TX_LIGHTBLUE, TX_GREEN, TX_LIGHTMAGENTA, t%2 * 2 + 0.5, t%2 * 5 - 3);
+
+         t ++;
+         txSleep (50);
+         }
+    }
+//--------------------------------------------------------------------------------------------------------------------------
