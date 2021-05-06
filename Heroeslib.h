@@ -122,7 +122,7 @@ void DrawGirl(int x, int y, double sizeX, double sizeY, int legsDistanceX, int l
     txLine (x + 5*sizeX,          y + 50*sizeY, x + (5 + legsDistanceX)*sizeX,                                    y + (80 - legsDistanceY)*sizeY);
 
     txSetFillColor (RGB (255, 228, 196));
-    txCircle       (x, y - 15*sizeY, 15);
+    txCircle       (x, y - 15*sizeY, 15*sizeX);
     }
 
 //{=============================================================================
