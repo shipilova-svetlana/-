@@ -63,6 +63,13 @@ void DrawSzenaNahalo()
 
          DrawBackgroundPezaj();
 
+         txSetColor     (RGB (181, 181, 181));
+         txSetFillColor (RGB (181, 181, 181));
+
+         POINT pesok[4] = {{0, 350},    {1200, 350},
+                          {1200, 500}, {0, 500}};
+         txPolygon (pesok, 4);
+
          DrawSun         (            600,      50,          (t%2) * 3,   (t/10)%2 * 2 - 1);
          DrawObloko      (              t,      70,               0.25,               0.25, TX_BLUE);
          DrawObloko      (              t,     100,                  1,                  1, TX_CYAN);
@@ -102,6 +109,13 @@ void DrawSzenaPrizemlenieRaketi()
 
          DrawBackgroundPezaj();
 
+         txSetColor     (RGB (181, 181, 181));
+         txSetFillColor (RGB (181, 181, 181));
+
+         POINT pesok[4] = {{0, 350},    {1200, 350},
+                           {1200, 500}, {0, 500}};
+         txPolygon (pesok, 4);
+
          DrawObloko (      t + 300,                   10,    2,   2, TX_BLUE);
          DrawObloko (      t + 100,                  120,  0.5, 0.5, TX_LIGHTBLUE);
          DrawObloko (      t - 300,                   10,    2,   2, TX_BLUE);
@@ -130,12 +144,19 @@ void DrawSzenaPosleDojd()
 
          DrawBackgroundPezaj();
 
+         txSetColor     (RGB (181, 181, 181));
+         txSetFillColor (RGB (181, 181, 181));
+
+         POINT pesok[4] = {{0, 350},    {1200, 350},
+                           {1200, 500}, {0, 500}};
+         txPolygon (pesok, 4);
+
          DrawObloko      (      t + 300,                   10,          2,    2, TX_BLUE);
          DrawObloko      (      t + 100,                  120,        0.5,  0.5, TX_LIGHTBLUE);
          DrawObloko      (      t - 300,                   10,          2,    2, TX_BLUE);
          DrawObloko      (      t - 100,                  120,        0.5,  0.5, TX_LIGHTBLUE);
          DrawRaketa      (          600,                  300,          2,    2);
-         DrawStrekoza    (          500,              t + 100,  t%2 * 0.2,  0.2, TX_CYAN, TX_GRAY, TX_LIGHTBLUE, -2, 3);
+         DrawStrekoza    (          500,              t + 100, t%2 * 0.20,  0.2, TX_CYAN, TX_GRAY, TX_LIGHTBLUE, -2, 3);
          DrawStrekoza    (          250,              t - 100, t%2 * 0.25, 0.25, TX_YELLOW, TX_GREEN, TX_LIGHTBLUE, t%2 + 0.5, t%2 * 2 - 3);
          DrawStrekoza    (      t + 150,              t - 100,       0.25, 0.25, TX_LIGHTMAGENTA, TX_DARKGRAY, TX_YELLOW, t%2 - 0.25, t%2 * 2 - 0.5);
          DrawStrekoza    (      t + 250,              t + 100,       0.25, 0.25, TX_LIGHTBLUE, TX_GRAY, TX_YELLOW, t%2 * 3, t%2 * 3 - 2);
@@ -165,6 +186,13 @@ void DrawSzenaOpozdanie()
          txClear();
 
          DrawBackgroundPezaj();
+
+         txSetColor     (RGB (181, 181, 181));
+         txSetFillColor (RGB (181, 181, 181));
+
+         POINT pesok[4] = {{0, 350},    {1200, 350},
+                           {1200, 500}, {0, 500}};
+         txPolygon (pesok, 4);
 
          DrawObloko      (         t + 300,                   10,                2,                2, TX_BLUE);
          DrawObloko      (         t + 100,                  120,              0.5,              0.5, TX_LIGHTBLUE);
