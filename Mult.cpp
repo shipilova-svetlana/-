@@ -55,6 +55,8 @@ int main()
 
 void DrawSzenaNahalo()
     {
+    txBegin();
+    txPlaySound ("lesnoy-ptichiy-effekt-41396.wav", SND_LOOP);
     int t = 500;
     while (t <= 1200)
          {
@@ -96,6 +98,7 @@ void DrawSzenaNahalo()
          t ++;
          txSleep (50);
          }
+    txEnd();
     }
 //----------------------------------------------------------------------------
 
