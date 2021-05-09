@@ -1,10 +1,44 @@
 //{====================================================================================================
-//
-//***@file       SvetlanaLib.h
-//
-//***@date           2021
-//
-//***@author Выполнила Шипилова СЛ
+//!
+//!@file       SvetlanaLib.h
+//!
+//!@date           2021
+//!
+//!@author Выполнила Шипилова СЛ
+//!@mainpage
+//!                  Используемые функции:
+//!
+//!                - @ref DrawObloko()
+//!@image html Obloko.png
+//!                - @ref DrawOblokoDoyd()
+//!@image html dojd.png
+//!                - @ref DrawRain()
+//!                - @ref DrawSun()
+//!                - @ref DrawDevohkaLIZA()
+//!@image html Devochka.png
+//!                - @ref DrawFir()
+//!                - @ref DrawCust()
+//!                - @ref DrawCot()
+//!@image html Kot.png
+//!                - @ref DrawMachina()
+//!                - @ref DrawMalchikIVAN()
+//!@image html Malchik.png
+//!                - @ref DrawDerevo()
+//!@image html Derevya.png
+//!                - @ref DrawStrekoza()
+//!@image html Strekoza.png
+//!                - @ref DrawElka()
+//!                - @ref DrawRaketa()
+//!                - @ref DrawSzenaDojd()
+//!                - @ref DrawSzenaLiven()
+//!                - @ref DrawBackground()
+//!                - @ref DrawBackgroundPezaj()
+//!                - @ref DrawOblokaPlivut()
+//!                - @ref DrawStrekoziMalenkie()
+//!                - @ref DrawPoletStrekoz()
+//!
+//! @image html Geroi.png
+//!
 //}====================================================================================================
 
 #include "TXLib.h"
@@ -55,7 +89,8 @@ void DrawPoletStrekoz();
 //!
 //! @see                           DrawOblokaPlivut()
 //!
-//! @par                           Пример использования:
+//! @par                          <b> Пример использования </b>
+//!                                @image html Obloko.png
 //! @code
 //!                                DrawObloko      (1000, 100, 2.00, 2.00, TX_BLUE);
 //!                                DrawObloko      ( 700, 120, 0.50, 0.50, TX_LIGHTBLUE);
@@ -86,7 +121,7 @@ void DrawObloko (int x, int y, double sizex, double sizey,
 //!
 //! @see                           DrawSzenaDojd()
 //!
-//! @par                           Пример использования:
+//! @par                          <b> Пример использования </b>
 //! @code
 //!                                DrawOblokoDoyd ( x, 100, 1, 1, TX_CYAN);
 //! @endcode
@@ -122,7 +157,7 @@ void DrawOblokoDoyd (int x, int y, double sizex, double sizey,
 //!
 //! @see                           DrawSzenaLiven()
 //!
-//! @par                           Пример использования:
+//! @par                           <b> Пример использования </b>
 //! @code
 //!                                DrawRain(10, 10, 10);
 //!                                DrawRain(20, 20, 30);
@@ -143,7 +178,6 @@ void DrawRain     (int x0, int y0, int sizeY)
 
             DrawObloko (t * 60 - 300,  50,   2,   2, TX_BLUE);
 
-
             txLine (x, t * 50 + x%2 * 20 + y0, x, t * 50 + x%2 * 20 + y0 + sizeY);
 
             }
@@ -160,9 +194,10 @@ void DrawRain     (int x0, int y0, int sizeY)
 //!
 //! @see                           DrawSzenaLiven()
 //!
-//! @par                           Пример использования:
+//! @par                           <b> Пример использования </b>
 //! @code
 //!                                DrawSzenaLiven();
+//!
 //! @endcode
 //}--------------------------------------------------------------------------------------------------------
 
@@ -184,7 +219,7 @@ void DrawSzenaLiven()
 //!
 //! @see                           DrawSzenaDojd()
 //!
-//! @par                           Пример использования:
+//! @par                           <b> Пример использования </b>
 //! @code
 //!                                {
 //!                                int t = 500;
@@ -217,7 +252,7 @@ void DrawSzenaDojd()
 //!
 //! @note                         Функция работает, но есть что исправить!
 //!
-//! @par                          Пример использования:
+//! @par                          <b> Пример использования </b>
 //! @code
 //!                               DrawSun    (600, 50, (t%2) * 3, (t/10)%2 * 2 - 1);
 //! @endcode
@@ -246,7 +281,7 @@ void DrawSun (int x, int y, double sizex, double sizey)
 //! @param sizey                  sizey - размер дерева по y
 //! @param COLORREF hbColor       Цвет дерева
 //!
-//! @par                          Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                               DrawFir (1000, 150, 1,   1,   TX_GREEN);
 //!                               DrawFir ( 300, 100, 0.5, 0.5, TX_YELLOW);
@@ -276,7 +311,7 @@ void DrawFir (int x, int y, double sizex, double sizey,
 //! @param sizex                  sizex - размер куста
 //! @param sizey                  sizey - размер куста
 //!
-//! @par                          Пример использования:
+//! @par                          <b> Пример использования </b>
 //! @code
 //!                               DrawCust ( 900, 700, 1,   1);
 //!                               DrawCust (1000, 700, 0.5, 0.5);
@@ -328,7 +363,7 @@ void DrawCust(int x, int y, double sizex, double sizey)
 //! @param glazR                  координата правого глаза (Кот может моргать правым глазом)
 //! @param glazL                  координата левого глаза (Кот может подмигивать левым глазом)
 //!
-//! @par                          Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                               DrawCot (250, 250, 0.50, 0.50, TX_BLACK, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 //! @endcode
@@ -394,7 +429,8 @@ void DrawCot(int x, int y, double sizex, double sizey,
 //! @param glazL                 Радиус левого глаза Девочки
 //! @param glazR                 правого глаза Девочки
 //!
-//! @par                         Пример использования:
+//! @par                         <b> Пример использования </b>
+//!@image html Devochka.png
 //! @code
 //!                              DrawDevohkaLIZA (350, 350, 2, 2, 10, 10, 10, 10, 0.5, 0.25, 0.5 );
 //! @endcode
@@ -460,7 +496,7 @@ void DrawDevohkaLIZA(int x, int y, double sizex, double sizey, double rukaL,
 //! @param sizey                 размер машины по оси Y
 //!
 //!
-//! @par                         Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                              DrawMachina (700, 370, 1, 1);
 //! @endcode
@@ -498,7 +534,7 @@ void DrawMachina(int x, int y, double sizex, double sizey)
 //! @param handUp
 //! @param smile
 //!
-//! @par                         Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                              DrawMalchikIVAN (400, 330, 0.5, 0.5, 2.5, 2, 2, 3);
 //! @endcode
@@ -551,7 +587,7 @@ void DrawMalchikIVAN(int x, int y, double sizex, double sizey, double twist,
 //! @param sizey                  Размер дерева
 //! @param COLORREF bbColor       Цвет листьев дерева
 //!
-//! @par                          Пример использования:
+//! @par                          <b> Пример использования </b>
 //! @code
 //!                               DrawDerevo ( 950, 150, 0.15, 0.15, TX_LIGHTGREEN);
 //! @endcode
@@ -585,7 +621,7 @@ void DrawDerevo (int x, int y, double sizex, double sizey,
 //! @param crazy                 размер глаз
 //! @param handUp                взмах крыльев
 //!
-//! @par                         Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                              DrawStrekoziMalenkie()
 //!                              DrawPoletStrekoz()
@@ -623,7 +659,7 @@ void DrawStrekoza (int x, int y, double sizex, double sizey,
 //! @param sizex                 size - размер елки  по  x
 //! @param sizey                 size - размер елки  по  y
 //!
-//! @par                         Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                              DrawElka (1000, 270, 1.00, 1.00);
 //! @endcode
@@ -654,7 +690,7 @@ void DrawElka(int x, int y, double sizex, double sizey)
 //! @param sizex                 size - размер ракеты  по  x
 //! @param sizey                 size - размер ракеты  по  y
 //!
-//! @par                         Пример использования:
+//! @par                         <b> Пример использования </b>
 //! @code
 //!                              DrawRaketa (600, 300, 2, 2);
 //! @endcode
@@ -681,7 +717,7 @@ void DrawRaketa(int x, int y, double sizex, double sizey)
 //!
 //! @param                     по умолчанию
 //!
-//! @par                       Пример использования:
+//! @par                       <b> Пример использования </b>
 //! @code                      DrawBackground()
 //!
 //! @endcode
@@ -716,7 +752,7 @@ void DrawBackground()
 //!
 //! @param                    по умолчанию
 //!
-//! @par                      Пример использования:
+//! @par                      <b> Пример использования </b>
 //! @code                     DrawBackgroundPezaj()
 //!
 //! @endcode
@@ -773,7 +809,7 @@ void DrawBackgroundPezaj()
 //!
 //! @param                   по умолчанию
 //!
-//! @par                     Пример использования:
+//! @par                     <b> Пример использования </b>
 //! @code                    DrawStrekoziMalenkie()
 //!
 //! @endcode
@@ -813,7 +849,7 @@ void DrawStrekoziMalenkie()
 //!
 //! @param                   по умолчанию
 //!
-//! @par                     Пример использования:
+//! @par                     <b> Пример использования </b>
 //! @code                    DrawOblokaPlivut()
 //!
 //! @endcode
@@ -845,7 +881,7 @@ void DrawOblokaPlivut()
 //!
 //! @param                  по умолчанию
 //!
-//! @par                    Пример использования:
+//! @par                   <b> Пример использования </b>
 //! @code                   DrawPoletStrekoz()
 //!
 //! @endcode
